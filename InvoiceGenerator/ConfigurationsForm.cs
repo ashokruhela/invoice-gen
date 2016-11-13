@@ -69,12 +69,13 @@ namespace InvoiceGenerator
             {
 
                 DateTime tempDt = DateTime.Now;
+                var dateString = tempDt.ToString(txtFormat.Text.Trim());
                 if (string.IsNullOrEmpty(txtOutputPath.Text))
                     errorMessage = "Output path cannot be empty";
                 if (string.IsNullOrEmpty(txtFormat.Text.Trim()))
                     errorMessage = "Folder name format cannot be empty";
-                if (!DateTime.TryParse(tempDt.ToString(txtFormat.Text.Trim()), out tempDt))
-                    errorMessage = "Folder name format is not valid";
+                //if (!DateTime.TryParse(dateString, System.Threading.Thread.CurrentThread.CurrentCulture,System.Globalization.DateTimeStyles.None, out tempDt))
+                //    errorMessage = "Folder name format is not valid";
                 if (string.IsNullOrEmpty(txtCustNo.Text.Trim()))
                     errorMessage = "Custmor care number cannot be empty";
                 if (string.IsNullOrEmpty(txtCompany.Text.Trim()))

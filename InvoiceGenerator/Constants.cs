@@ -46,6 +46,10 @@ namespace InvoiceGenerator
 
         public static void LoadSettings()
         {
+            if(string.IsNullOrEmpty(Properties.Settings.Default.OutputPath))
+            {
+                Properties.Settings.Default.OutputPath = Environment.CurrentDirectory;
+            }
             
             OutputFilePath = Properties.Settings.Default.OutputPath;
             FolderNameFormat = Properties.Settings.Default.FolderNameFormat;

@@ -232,8 +232,10 @@ namespace InvoiceGenerator
                         #endregion
 
                         #region  Header
-                        range = SetRangeParams(ref newWorkSheet, "A1", "J1", rangeValue: "Retail Invoice", merge: true, bold: true, center: true, borderAround: true, release: false);
+                        string rangeValue = "Retail Invoice";
+                        range = SetRangeParams(ref newWorkSheet, "A1", "J1", rangeValue: rangeValue, merge: true, bold: true, center: true, borderAround: true, release: false);
                         range.Cells.Font.Size = 20;
+                        //range.Characters[1, rangeValue.Length].Font.FontStyle = "bold";
                         range.Interior.Color = headerColor;
                         Marshal.FinalReleaseComObject(range);
                         #endregion
@@ -250,7 +252,7 @@ namespace InvoiceGenerator
                         SetRangeParams(ref newWorkSheet, "A1", "J24", false, string.Empty, true, false, true);
 
                         //customer id
-                        string rangeValue = "CUSTOMER ID : " + GetColumnValue(row, Constants.CustomerID);
+                        rangeValue = "CUSTOMER ID : " + GetColumnValue(row, Constants.CustomerID);
                         range = SetRangeParams(ref newWorkSheet, "A2", "A3", true, rangeValue, true, release: false, center: true);
                         range.HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
                         range.Characters[1, 13].Font.FontStyle = "bold";
