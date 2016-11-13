@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="InvoiceGenerator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OutputPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E:\projects\windows\InvoiceGenerator\Soft conditon\Generated</Value>
+    </Setting>
+    <Setting Name="ContestName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SPL Contest</Value>
+    </Setting>
+    <Setting Name="FolderNameFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dd-MM-yyyy</Value>
+    </Setting>
+    <Setting Name="BackColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="CustCareNo" Type="System.String" Scope="User">
+      <Value Profile="(Default)"> 0958-222-8289</Value>
+    </Setting>
+    <Setting Name="Company" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HRD ENTERPRISES</Value>
+    </Setting>
+    <Setting Name="TinNumber" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1234567834</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
