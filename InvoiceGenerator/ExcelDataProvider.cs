@@ -486,8 +486,8 @@ namespace InvoiceGenerator
                         {
                             newProducts = string.Join("+", newProducts, otherProducts);
                             totalPrice += Convert.ToDouble(GetColumnValue(otherRow, Constants.OrderValue));
-                            string lastDigits = otherorderID.Substring(otherorderID.Length - 5, 5);
-                            newOrderID = string.Join("/", newOrderID, lastDigits);
+                            // string lastDigits = otherorderID.Length >= 5 ? otherorderID.Substring(otherorderID.Length - 5, 5) : otherorderID;
+                            newOrderID = string.Join("/", newOrderID, otherorderID);
                             SetColumnValue(otherRow, Constants.Skip, "Yes");
                             SetColumnValue(row, Constants.Products, newProducts);
                             SetColumnValue(row, Constants.OrderValue, totalPrice.ToString());
