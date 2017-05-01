@@ -277,7 +277,7 @@ namespace InvoiceGenerator
                         //seller detils
                         string tinSupport = string.Format("Company's TIN/VAT No. :- {0}\n{1}", Constants.TinNumber, supportEmail);
                         string sellerAddress = string.Format("{0}\n\nNew Delhi, India\nTelephone: {1}\n\n{2}", 
-                            Constants.CompanyName, Constants.Phone, tinSupport);
+                            Constants.CompanyName, Constants.CustCareNumber, tinSupport);
                         SetRangeParams(ref newWorkSheet, "A4", "D4", true, "SELLER DETAILS", true, false, true, bold: true);
                         range = SetRangeParams(ref newWorkSheet, "A5", "D11", true, sellerAddress, true, release: false);
                         range.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
