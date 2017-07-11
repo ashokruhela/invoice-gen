@@ -198,7 +198,7 @@ namespace InvoiceGenerator
                         excelApp = new Excel.Application();
                         excelApp.Visible = false;
                         object misValue = System.Reflection.Missing.Value;
-                        string supportEmail = @"info@mineemart.com";
+                        string supportEmail = @"sales@mineemart.com";
                         string companyTinNumber = string.Empty;
                         string website = "www.mineemart.com";
 
@@ -275,7 +275,7 @@ namespace InvoiceGenerator
                         Marshal.FinalReleaseComObject(range);
 
                         //seller detils
-                        string tinSupport = string.Format("Company's TIN/VAT No. :- {0}\n{1}", Constants.TinNumber, supportEmail);
+                        string tinSupport = string.Format("Company's GSTIN :- {0}\n{1}", Constants.TinNumber, supportEmail);
                         string sellerAddress = string.Format("{0}\n\nNew Delhi, India\nTelephone: {1}\n\n{2}", 
                             Constants.CompanyName, Constants.CustCareNumber, tinSupport);
                         SetRangeParams(ref newWorkSheet, "A4", "D4", true, "SELLER DETAILS", true, false, true, bold: true);
